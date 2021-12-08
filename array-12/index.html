@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-12</title>
+</head>
+
+<body>
+	<script>
+
+		// 12) Заполнить массив из 10 элементов случайными числами в интервале [0..4] и 
+		// определить, есть ли в нем одинаковые соседние элементы.	
+
+
+		var arrRandom = [],
+			arrNum = [];
+
+		for (var i = 0; i < 10; i++) {
+			arrRandom[i] = random(0, 4);
+		}
+
+		console.log(arrRandom);
+		arrRandom = arrSimilar(arrRandom);
+		console.log(arrRandom);
+
+		function arrSimilar(arr) {
+			arrNum = [];
+
+			for (var i = 0; i < arr.length; i++) {
+				var num = arr[i];
+
+				if (arr[i] = arr[i + 1]) arrNum = arr[i];
+
+				if (arrNum > 0) {
+					return true;
+				} else (false);
+			}
+
+			return arrNum;
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+
+
+
+
+	</script>
+
+</body>
+
+</html>

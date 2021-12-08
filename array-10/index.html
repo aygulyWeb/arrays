@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-10</title>
+</head>
+
+<body>
+	<script>
+		// 10) В одномерном массиве (заполнение массива случайными числами от -50 до 49) 
+		// найти сумму отрицательных элементов. Если эта сумма меньше -100, то необходимо
+		// прибавить к ней минимальный положительный элемент.
+
+		var arrRandom = [];
+
+		for (var i = 0; i < 50; i++) {
+			arrRandom[i] = random(-50, 49);
+		}
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+
+		console.log(arrRandom);
+		arrRandom = arrMinus(arrRandom);
+
+		function arrMinus(arr) {
+
+			var arrNum = [];
+			var sum = 0;
+
+
+			for (var i = 0; i < arr.length; i++) {
+				var num = arr[i];
+
+				if (num < 0) {
+					arrNum.push(num);
+					sum += num;
+
+				}
+
+				if (sum <= -100) {
+					sum += 1;
+
+				}
+
+			}
+			return `Отрицательные числа ${arrNum} 
+			сумма отрицательных чисел ${sum}`;
+
+		}
+
+		console.log(arrRandom);
+
+
+
+	</script>
+
+</body>
+
+</html>

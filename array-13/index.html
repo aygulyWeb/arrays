@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-14</title>
+</head>
+
+<body>
+	<script>
+
+
+		// 	14) Заполнить массив из 10 элементов случайными числами в интервале[-10..10] 
+		// и сделать реверс отдельно для 1 - ой и 2 - ой половин массива.
+
+		function getRandom() {
+
+			let n;
+			let arr = [];
+			let max = -10;
+			let min = 10;
+
+			for (let i = 0; i < 10; i++) {
+				arr[i] = Math.round(Math.random() * (max - min) + min);
+				console.log(arr[i]);
+				arr.reverse();
+
+			}
+
+
+		}
+
+
+		getRandom();
+
+
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-11</title>
+</head>
+
+<body>
+	<script>
+
+		// 11) Дан массив из N элементов в диапазоне [100;300]. Сжать массив, 
+		// оставив в нем только те элементы, сумма цифр которых четная.
+
+
+		// function getRandom() {
+
+		// 	let n = +prompt("N=")
+		// 	let arr = [];
+		// 	let num2, count = 0, summa = 0;
+
+		// 	for (let i = 0; i < n; i++) {
+		// 		arr[i] = Math.random() * (300 - 100) + 100;
+		// 		console.log(Math.round(arr[i]));
+
+		// 		while (arr[i] != 0) {
+		// 			num2 = arr[i] % 10;
+		// 			arr[i] = (arr[i] - num2) / 10;
+		// 			summa += num2;
+
+		// 			count++;
+
+		// 		}
+		// 	}
+		// 	console.log(`Сумма четных цифр равна ${Math.round(summa)}`);
+		// }
+
+		// getRandom();
+
+		var arrRandom = [],
+			arrNum = [];
+
+		for (var i = 0; i < 10; i++) {
+			arrRandom[i] = random(100, 300);
+		}
+
+		console.log(arrRandom);
+		arrRandom = squeezeArray(arrRandom);
+		console.log(arrRandom);
+
+
+		function squeezeArray(arr) {
+			var arrNum = [];
+
+			for (var i = 0; i < arr.length; i++) {
+				var num = arr[i],
+					sum = 0;
+
+				while (num) {
+					sum += num % 10;
+					num = parseInt(num / 10);
+				}
+
+				if (sum % 2 == 0) {
+					arrNum.push(arr[i]);
+				}
+			}
+
+			return arrNum;
+		}
+
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+
+
+
+
+	</script>
+
+</body>
+
+</html>

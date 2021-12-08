@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-7</title>
+</head>
+
+<body>
+	<script>
+		// 	7) Найти максимальный элемент массива и его индекс (max_num   и   max_index).
+
+		function getNum() {
+			let arr = [5, 7, 3, 9, 12, 31, 4, -5];
+			let maxNum = arr[0];
+			let maxIndex = 0;
+
+			for (let i = 0; i < arr.length; i++) {
+				if (maxNum < arr[i])
+					maxNum = arr[i];
+				maxIndex = i - 1;
+
+			}
+			return `максимальный цифр массива: ${maxNum} \nмаксимальный индекс массива: ${maxIndex}`;
+		}
+
+		console.log(getNum());
+
+
+
+
+		// function getRandom(min, max) {
+		// 	return Math.round(Math.random() * (max - min) + min);
+		// };
+
+		// var random, arr = [];
+
+		// var min = +prompt('Стартовое значение');
+
+		// var max = +prompt('Финишное значение');
+
+		// var step = +prompt('Введите шаг');
+
+
+		// for (var i = 0; i < step; i++) {
+		// 	random = getRandom(min, max);
+		// 	arr.push(random);
+
+		// };
+
+		// console.log(arr);
+
+		// var maxNum = arr[0], maxIndex = 0;
+
+		// for (var i = 0; i < step; i++) {
+		// 	if (arr[i] > maxNum) {
+		// 		maxNum = arr[i];
+		// 		maxIndex = i;
+		// 	}
+		// }
+
+		// console.log('Максимальное значение-' + maxNum);
+		// console.log('Максимальный индекс-' + maxIndex);
+
+
+
+	</script>
+
+</body>
+
+</html>
