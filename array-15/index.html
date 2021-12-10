@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-15</title>
+</head>
+
+<body>
+	<script>
+
+
+		// 15) Заполнить массив из 12 элементов случайными числами в интервале [-12..12]
+		//  и выполнить циклический сдвиг ВПРАВО на 4 элемента.
+
+		var arrRandom = [];
+		var step = 4;
+
+
+		for (var i = 0; i < 12; i++) {
+			arrRandom[i] = random(-12, 12);
+		}
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+		console.log(arrRandom);
+
+		//  pop() - Удаляет элемент с конца массива и возвращает его. 
+		//unshift() добавляет переданный элемент в начало массива
+		// 1 variant
+
+		for (var i = 0; i < step; i++) {
+			arrRandom.unshift(arrRandom.pop());
+
+
+		}
+
+		console.log(arrRandom);
+
+		// 2 variant
+		// arrRandom = arrRandom.splice(-4).concat(arrRandom);
+		// console.log(arrRandom);
+
+
+
+
+
+
+	</script>
+
+</body>
+
+</html>
