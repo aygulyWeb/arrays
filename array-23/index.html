@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-23</title>
+</head>
+
+<body>
+	<script>
+
+		// 23) Дан одномерный массив. Найти среднее арифметическое его элементов. 
+		// Вывести на экран только те элементы массива, 
+		// которые больше найденного среднего арифметического.
+
+		var arrRandom = [];
+
+		for (var i = 0; i < 6; i++) {
+			arrRandom[i] = random(1, 10);
+		}
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+		console.log(arrRandom);
+		arrRandom = getAverage(arrRandom);
+
+
+		function getAverage(arr) {
+			var num = [];
+			var summ = 0;
+			var arif;
+
+			for (var i = 0; i < arr.length; i++) {
+				summ += arr[i];
+				arif = summ / 6;
+
+				if (arr[i] > arif) {
+					num.push(arr[i])
+
+				}
+
+			}
+			return `среднее арифетическое: ${arif}\n элементы больше с.а - ${num}`;
+		}
+
+		console.log(arrRandom);
+
+	</script>
+
+</body>
+
+</html>

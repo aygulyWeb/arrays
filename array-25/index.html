@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-25</title>
+</head>
+
+<body>
+	<script>
+
+		// 25) Получить среднее арифметическое всех чётных (even) элементов массива, стоящих на нечётных (odd) местах.
+
+		var arrRandom = [];
+
+		for (var i = 0; i < 10; i++) {
+			arrRandom[i] = random(1, 30);
+		}
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+		console.log(arrRandom);
+		arrRandom = getAverage(arrRandom);
+
+		function getAverage(arr) {
+			var numEven = [];
+			var numAverage;
+			var summ = 0;
+
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] % 2 == 0 && i % 2 != 0) {
+					numEven.push(arr[i]);
+
+				}
+			}
+			return numEven;
+		}
+		console.log(arrRandom);
+
+
+	</script>
+
+</body>
+
+</html>

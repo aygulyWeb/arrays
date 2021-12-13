@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array-24</title>
+</head>
+
+<body>
+	<script>
+
+		// 24) Дан массив A вещественного типа, содержащий 20 положительных и отрицательных элементов. 
+		// Сформировать массив B из положительных элементов массива A, имеющих четный индекс.
+		// Найти сумму квадратов элементов нового массива.
+
+		var arrRandom = [];
+
+		for (var i = 0; i < 20; i++) {
+			arrRandom[i] = random(-20, 20);
+		}
+
+		function random(min, max) {
+			var rand = min + Math.random() * (max - min + 1);
+			return Math.round(rand);
+		}
+		console.log(arrRandom);
+		arrRandom = getPlus(arrRandom);
+
+		function getPlus(arr) {
+			var arrB = [];
+			var summ = 0;
+
+			for (var i = 0; i < arr.length; i++) {
+
+				if (arr[i] > 0 && i % 2 == 0) {
+					arrB.push(arr[i]);
+
+					// for (var j = 0; j > arrB.length; i++) {
+					// 	summ += arrB[j] * arrB[j];
+					// }
+
+				}
+
+
+			}
+			return `положительных элементов массива A, имеющих четный индекс: ${arrB}\n Сумма квадратов элементов нового массива: ${summ}`;
+		};
+		console.log(arrRandom);
+
+
+
+
+	</script>
+
+</body>
+
+</html>
